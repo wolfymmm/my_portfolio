@@ -1,0 +1,136 @@
+@use '../../variables' as *;
+
+
+:root {
+  --nav-bg: rgba(255, 255, 255, 0.65);  
+  --nav-border: rgba(255, 255, 255, 0.4);
+  --nav-shadow: rgba(142, 105, 255, 0.06); 
+  --nav-text: #1a1a1a;
+  --nav-text-hover: #8e69ff;
+  
+  --btn-grad-start: #e9d5ff;               
+  --btn-grad-end: #f3e8ff;
+  --btn-text: #1a1a1a;
+}
+
+[data-theme="dark"] {
+  --nav-bg: rgba(20, 16, 32, 0.65);        
+  --nav-border: rgba(255, 255, 255, 0.05);
+  --nav-shadow: rgba(0, 0, 0, 0.3);
+  --nav-text: #f3f4f6;
+  --nav-text-hover: #c084fc;
+  
+  --btn-grad-start: #a855f7;
+  --btn-grad-end: #9333ea;
+  --btn-text: #ffffff;
+}
+
+.navbar-container {
+  // 1. Головні властивості для фіксації
+  position: fixed;
+  top: 20px;            // Відступ від верхнього краю екрана при скролі
+  left: 50%;            // Центруємо кнопку по горизонталі
+  transform: translateX(-50%); // Разом з left: 50% ідеально центрує плашку
+  z-index: 1000; 
+
+  // 2. Розміри та флекси
+  width: calc(100% - 40px); // Ширина хедера з урахуванням відступів з боків
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  // Твої інші стилі (background, border, padding, backdrop-filter тощо)
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--nav-border);
+  border-radius: 100px;
+  padding: 12px 32px;
+  box-shadow: 0 8px 32px 0 var(--nav-shadow);
+  
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; 
+}            
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  
+  .logo {
+    height: 20px;                         
+    width: auto;
+    object-fit: contain;
+  }
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 32px;                            
+  margin: 0;
+  padding: 0;
+
+  .nav-link {
+    text-decoration: none;
+    color: var(--nav-text);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--nav-text-hover);
+    }
+  }
+
+  li:last-child {
+    display: flex;
+    align-items: center;
+    gap: 24px;                             
+  }
+}
+
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);                 
+  }
+
+  .theme-switcher {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+
+.contact-button {
+  background: linear-gradient(135deg, var(--btn-grad-start), var(--btn-grad-end));
+  color: var(--btn-text);
+  border: none;
+  left: auto;
+  border-radius: 100px;                    
+  padding: 12px 26px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(142, 105, 255, 0.15); 
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);            
+    box-shadow: 0 6px 20px rgba(142, 105, 255, 0.25);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
