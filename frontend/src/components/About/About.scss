@@ -1,0 +1,15 @@
+.about-container {
+  grid-column: 1 / -1; // Займає всю ширину грида
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+
+
+  .about-photo {
+    width: 336px;
+    height: 450px;
+    object-fit: cover;
+    margin-top: 20px;
+  }
+}

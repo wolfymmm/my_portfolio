@@ -4,6 +4,7 @@ import { useAppSelector } from './store';
 import { Home } from './pages/Home/Home'; 
 import Layout from './Layout';
 import './App.scss'; 
+import { Navbar } from './components/Navbar/Navbar';
 
 const App: React.FC = () => {
   const themeMode = useAppSelector((state) => state.theme.mode);
@@ -13,11 +14,14 @@ const App: React.FC = () => {
   }, [themeMode]);
 
   return (
+    <>
+    <Navbar />
     <Routes>
       <Route element={<Layout />}> 
         <Route path="/" element={<Home />} />
       </Route>
     </Routes>
+    </>
   );
 }
 

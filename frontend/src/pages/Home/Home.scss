@@ -1,17 +1,18 @@
 @use '../../variables';
+@use '../../mixins' as *;
 
 .home-container {
-  grid-column: 1 / -1; // Займає всю ширину грида
+  grid-column: 1 / -1; 
   min-height: 100vh;
   width: 100%;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   
-  // Використовуємо змінну фону
   background-color: var(--home-bg);
-  // Плавний перехід кольору при зміні теми
   transition: background-color 0.3s ease; 
+
+  position: relative;
+  overflow: hidden;
 }
 
 .home-content {
@@ -22,36 +23,46 @@
   text-align: center;
 
   .nav-availability {
-    display: inline-block;
-  margin-top: 154px;       // Створює необхідний простір між хедером та цим написом
-  margin-bottom: 26px;    // Відступ від напису до головного заголовка "Hi! I am Yana"
+  display: inline-block;
+  margin-top: 134px;      
+  margin-bottom: 26px;   
   padding: 8px 16px;
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--text-secondary);
-  background-color: var(--accent);
+  border-radius: 30px;
+  color: black;
+  background-color: white;
   }
 
   .nav-title {
-    font-size: 3rem;
+    font-size: 62px;
     font-weight: 700;
     margin-bottom: 10px;
-    
-    // Колір заголовка залежить від теми
+
     color: var(--text-title);
     transition: color 0.3s ease;
+
+
+    @include mobile {
+      font-size: 36px;
+    }
+    
   }
 
   .nav-subtitle {
-    font-size: 1.5rem;
+    font-size: 24px;
+    margin-bottom: 46px;
     
-    // Колір підзаголовка залежить від теми
+
     color: var(--text-subtitle);
     transition: color 0.3s ease;
+
+     @include mobile {
+      font-size: 22px;
+    }
   }
 }
 
-// Стилізація твоїх фонових ефектів світіння (Glow)
 .bg-glow {
   position: absolute;
   width: 400px;
@@ -60,7 +71,7 @@
   filter: blur(80px);
   pointer-events: none;
   z-index: 1;
-  transition: background 0.3s ease; // Щоб світіння теж змінювалося плавно
+  transition: background 0.3s ease; 
 
   &--top {
     top: -10%;
@@ -72,5 +83,18 @@
     bottom: -10%;
     right: -10%;
     background: var(--glow-color-2);
+  }
+}
+
+.button-group-home {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 142px;
+
+  @include mobile {
+    flex-direction: column;
+    gap: 12px;
   }
 }
