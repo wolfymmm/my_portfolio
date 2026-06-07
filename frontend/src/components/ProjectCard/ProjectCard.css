@@ -1,0 +1,123 @@
+.project-card {
+  background: linear-gradient(rgba(255, 255, 255, 0) 50%, var(--bg-main-card));
+  border-radius: 23px; 
+  overflow: hidden;   
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 40px var(--glow-color-2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.4s ease forwards;
+  height: 100%; 
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 45px var(--glow-color-1);
+}
+
+.project-card .project-image-wrapper {
+  width: 100%;
+  height: 280px;     
+  overflow: hidden;
+}
+
+.project-card .project-image-wrapper .project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.project-card .project-content {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; 
+}
+
+.project-card .project-content .project-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 14px 0;
+}
+
+.project-card .project-content .project-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin: 0 0 24px 0;
+  flex-grow: 1; 
+}
+
+.project-card .project-content .project-tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.project-card .project-content .project-tags .project-tag {
+  flex: 0;
+  min-width: max-content; 
+  background-color: var(--bg-secondary-card);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 100px;
+  padding: 8px 16px; 
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 1px 3px -1px var(--glow-color);
+}
+
+.project-card .project-content .project-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: auto; 
+  padding-top: 12px;
+  flex-wrap: nowrap;
+  font-size: 0.9rem;
+}
+
+.project-card .project-content .project-links .project-link-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: transform 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+}
+
+.project-card .project-content .project-links .project-link-icon:hover {
+  transform: translateY(-2px);
+  color: var(--accent-purple); 
+  opacity: 0.8;
+}
+
+
+.project-card .project-content .project-links .project-link-icon .icon-img,
+.project-card .project-content .project-links .project-link-icon .icon-svg,
+.project-card .project-content .project-links .project-link-icon .icon-svg-stroke {
+  width: 24px;
+  height: 24px;
+  margin-right: 6px;
+  display: block;
+}
+
+.project-card .project-content .project-links .project-link-icon .icon-img {
+  object-fit: contain;
+}
+
+.project-card .project-content .project-links .project-link-icon .icon-svg {
+  fill: currentColor;
+}
+
+.project-card .project-content .project-links .project-link-icon .icon-svg-stroke {
+  stroke: currentColor;
+}
+

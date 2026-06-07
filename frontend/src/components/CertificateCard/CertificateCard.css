@@ -1,0 +1,107 @@
+
+.certificate-card {
+  background-color: var(--bg-main-card); 
+  border-radius: 24px;
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 10px 30px var(--glow-color-2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px var(--glow-color-1);
+}
+
+.certificate-card .certificate-image-wrapper {
+  width: 80%;
+  background-color: #ffffff; 
+  border-radius: 16px;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.certificate-card .certificate-image-wrapper .certificate-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.certificate-card .certificate-info {
+  margin-top: 20px;
+  flex-grow: 1; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.certificate-card .certificate-info .certificate-platform {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--accent-purple);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.certificate-card .certificate-info .certificate-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.certificate-card .certificate-info .certificate-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  max-width: 280px;
+}
+
+.certificate-card .certificate-info .certificate-year {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.certificate-card .view-certificate-btn {
+  width: 100%;
+  background-color: var(--bg-secondary-card);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 100px;
+  padding: 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 0 15px -1px var(--glow-color);
+  transition: box-shadow 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+}
+
+.certificate-card .view-certificate-btn:hover {
+  box-shadow: 0 0 30px 2px var(--glow-color);
+  background-color: var(--glow-color-2); 
+}
+
+.certificate-card .view-certificate-btn:active {
+  transform: scale(0.98);
+}
+
+.certificate-card .view-certificate-btn .btn-icon {
+  width: 16px;
+  height: 16px;
+}

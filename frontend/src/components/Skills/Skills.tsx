@@ -1,15 +1,24 @@
 import React, { useState } from 'react';
-import './Skills.scss';
+import './Skills.css';
 
-// 1. Імпортуємо твої SVG-іконки (заміни шляхи на свої реальні файли)
-import figmaIcon from '../../assets/figmaIcon.svg';
-import aiIcon from '../../assets/illustratorIcon.svg';
-import reactIcon from '../../assets/reactIcon.svg';
-import htmlCssIcon from '../../assets/css_html_Icon.svg'; // або окремо
-import scssIcon from '../../assets/scssIcon.svg';
-import jsIcon from '../../assets/javaScriptIcon.svg';
+import figmaIcon from '../../assets/skills/figmaIcon.svg';
+import aiIcon from '../../assets/skills/illustratorIcon.svg';
+import reactIcon from '../../assets/skills/reactIcon.svg';
+import htmlCssIcon from '../../assets/skills/css_html_Icon.svg'; 
+import scssIcon from '../../assets/skills/scssIcon.svg';
+import jsIcon from '../../assets/skills/javaScriptIcon.svg';
+import tsIcon from '../../assets/skills/tsIcon.svg';
+import nodeIcon from '../../assets/skills/nodeIcon.svg';
+import gitIcon from '../../assets/skills/gitIcon.svg'; 
+import pythonIcon from '../../assets/skills/pythonIcon.svg';
+import reduxIcon from '../../assets/skills/reduxIcon.svg';
+import fastaApiIcon from '../../assets/skills/fastApiIcon.svg';  
+import postmanIcon from '../../assets/skills/postmanIcon.svg';
+import sequelizeIcon from '../../assets/skills/sequelizeIcon.svg';
+import prismaIcon from '../../assets/skills/prismaIcon.svg';
+import postgresIcon from '../../assets/skills/postgresIcon.svg';
+import mongodbIcon from '../../assets/skills/mongodbIcon.svg';
 
-// Описуємо тип для категорій
 type CategoryType = 'All' | 'Design' | 'Frontend' | 'Backend' | 'Tools';
 
 interface SkillItem {
@@ -18,7 +27,6 @@ interface SkillItem {
   icon: string;
 }
 
-// 2. База даних твоїх навичок
 const skillsData: SkillItem[] = [
   { name: 'Figma', category: 'Design', icon: figmaIcon },
   { name: 'Adobe Illustrator', category: 'Design', icon: aiIcon },
@@ -26,19 +34,24 @@ const skillsData: SkillItem[] = [
   { name: 'HTML/CSS', category: 'Frontend', icon: htmlCssIcon },
   { name: 'SCSS', category: 'Frontend', icon: scssIcon },
   { name: 'JavaScript', category: 'Frontend', icon: jsIcon },
-  // Додай сюди бекенд та інструменти, коли вони з'являться:
-  // { name: 'Node.js', category: 'Backend', icon: nodeIcon },
-  // { name: 'Git', category: 'Tools', icon: gitIcon },
+  { name: 'TypeScript', category: 'Frontend', icon: tsIcon },
+  { name: 'Node.js', category: 'Backend', icon: nodeIcon },
+  { name: 'Git', category: 'Tools', icon: gitIcon },
+  { name: 'Python', category: 'Backend', icon: pythonIcon },
+  { name: 'Redux', category: 'Frontend', icon: reduxIcon },
+  { name: 'FastApi', category: 'Backend', icon: fastaApiIcon },
+  { name: 'Postman', category: 'Tools', icon: postmanIcon },
+  { name: 'Sequelize', category: 'Backend', icon: sequelizeIcon },
+  { name: 'Prisma', category: 'Backend', icon: prismaIcon },
+  { name: 'PostgreSQL', category: 'Backend', icon: postgresIcon },
+  { name: 'MongoDB', category: 'Backend', icon: mongodbIcon },
 ];
 
-// Список категорій для рендеру кнопок
 const categories: CategoryType[] = ['All', 'Design', 'Frontend', 'Backend', 'Tools'];
 
 export const Skills: React.FC = () => {
-  // Стейт, який зберігає поточну вибрану категорію
   const [activeCategory, setActiveCategory] = useState<CategoryType>('All');
 
-  // 3. Логіка фільтрації: якщо 'All' — показуємо все, інакше — фільтруємо за категорією
   const filteredSkills = activeCategory === 'All'
     ? skillsData
     : skillsData.filter(skill => skill.category === activeCategory);
@@ -47,13 +60,11 @@ export const Skills: React.FC = () => {
     <section id="skills" className="skills-container">
       <h2 className="skills-title">My Skills</h2>
 
-      {/* Блок кнопок-фільтрів */}
       <div className="skills-filter-wrapper">
         {categories.map((category) => (
           <button
             key={category}
-            // Якщо кнопка активна, додаємо їм клас 'active'
-            className={`filter-btn ${activeCategory === category ? 'active' : ''}`}
+            className={`filter-btn ${activeCategory === category ? 'purple-gradient-button' : 'transparent-button'}`}
             onClick={() => setActiveCategory(category)}
           >
             {category}
@@ -61,7 +72,6 @@ export const Skills: React.FC = () => {
         ))}
       </div>
 
-      {/* Сітка з іконками навичок */}
       <div className="skills-grid">
         {filteredSkills.map((skill, index) => (
           <div key={index} className="skill-card">

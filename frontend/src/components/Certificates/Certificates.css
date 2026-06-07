@@ -1,0 +1,89 @@
+.certificates-container {
+  max-width: 1200px;
+  margin-bottom: 178px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.certificates-container .section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.certificates-filter {
+  gap: 22px;
+  display: flex;
+  margin-bottom: 50px;
+  flex-wrap: wrap; 
+  justify-content: center;
+}
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+  gap: 32px;
+  width: 100%;
+}
+
+@media (max-width: 639px) {
+  .certificates-container {
+    margin-bottom: 100px;
+  }
+
+  .certificates-container .section-title {
+    font-size: 2rem;
+    margin-bottom: 24px;
+  }
+
+  .certificates-filter {
+    gap: 12px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 24px;
+    
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .certificates-filter::-webkit-scrollbar {
+    display: none;
+  }
+
+  .certificates-filter button,
+  .certificates-filter .filter-btn {
+    flex-shrink: 0;
+    margin: 0;
+  }
+
+  .certificate-card {
+    padding: 24px; 
+  }
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(15px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}

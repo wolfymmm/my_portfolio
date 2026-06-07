@@ -2,9 +2,11 @@ import { Route, Routes } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useAppSelector } from './store';
 import { Home } from './pages/Home/Home'; 
+import { NotFound } from './pages/NotFound/NotFound';
 import Layout from './Layout';
-import './App.scss'; 
-import { Navbar } from './components/Navbar/Navbar';
+import './variables.css'; 
+import './shared.css';
+import './App.css'; 
 
 const App: React.FC = () => {
   const themeMode = useAppSelector((state) => state.theme.mode);
@@ -15,10 +17,10 @@ const App: React.FC = () => {
 
   return (
     <>
-    <Navbar />
     <Routes>
       <Route element={<Layout />}> 
         <Route path="/" element={<Home />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
     </>

@@ -1,5 +1,5 @@
 import React from 'react';
-import './CertificateCard.scss';
+import './CertificateCard.css';
 
 export interface CertificateProps {
   image: string;

@@ -1,0 +1,72 @@
+
+.glass-effect {
+  background-color: var(--glass-bg); 
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(12px); 
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 var(--glass-shadow);
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.purple-gradient-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  padding: 14px 42px; 
+  border-radius: 100px; 
+  border: none;
+  cursor: pointer;
+  
+  background: linear-gradient(135deg, var(--bg-start) 0%, var(--bg-end) 100%);
+  color: #0D0D0A;
+  font-family: var(--font-main);
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  line-height: 1.2;
+  
+  box-shadow: 0 0 20px -2px var(--glow-color);
+  transition: box-shadow 0.25s ease, opacity 0.25s ease, background-color 0.25s ease;
+}
+
+.purple-gradient-button:hover {
+  opacity: 1;
+  box-shadow: 0 0 30px 2px var(--glow-color);
+}
+
+.purple-gradient-button:active {
+  opacity: 0.9;
+  box-shadow: 0 0 15px -1px var(--glow-color);
+}
+
+.transparent-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  padding: 13px 42px; 
+  border-radius: 100px; 
+  border: 1px var(--bg-start) solid;
+  cursor: pointer;
+  background: transparent;
+
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  line-height: 1.2;
+  
+  transition: box-shadow 0.1s ease, opacity 0.25s ease;
+}
+
+.transparent-button:hover {
+  opacity: 1;
+  box-shadow: 0 0 30px 2px var(--glow-color);
+}
+
+.transparent-button:active {
+  opacity: 0.9;
+  box-shadow: 0 0 15px -1px var(--glow-color);
+}

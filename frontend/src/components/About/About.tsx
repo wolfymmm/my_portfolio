@@ -1,16 +1,34 @@
 import React from 'react';
 import myPhoto from '../../assets/my_photo.png';
-import './About.scss';
+import './About.css';
 
 export const About: React.FC = () => {
   return (
-    <div id="about"className="about-container">
-      <h2>About Me</h2>
-      <p>
-        I am a passionate Full-Stack Developer and UI/UX Designer with a knack for turning ideas into polished web applications. With experience in both frontend and backend development, I specialize in creating seamless user experiences while ensuring robust functionality. My design background allows me to craft visually appealing interfaces that are not only user-friendly but also align with the latest design trends. I thrive on challenges and am always eager to learn new technologies to enhance my skill set.
-      </p>
-    <img src={myPhoto} alt="Yana Marusina Photo" className="about-photo" />
-    </div>
+    <section id="about" className="about-container">
+      <div className="about-content">
+        
+        <div className="about-text">
+          <h2>About me</h2>
+          <p>
+            I am a Full-Stack Developer and UI/UX Designer who builds complete web products from scratch. 
+            I handle the entire product lifecycle, ensuring a smooth and reliable transition from abstract 
+            ideas and visual mockups to a live, working interface.
+          </p>
+          <p>
+            Dedicated to clean code and user-centered design, I focus on creating efficient, 
+            maintainable, and highly responsive applications.
+          </p>
+          <p>
+            Always ready to adapt, master new tools, and build digital solutions that make an impact :)
+          </p>
+        </div>
+
+        <div className="about-photo-wrapper">
+          <img src={myPhoto} alt="Yana Marusina" className="about-photo" />
+        </div>
+
+      </div>
+    </section>
   );                     
 };
 

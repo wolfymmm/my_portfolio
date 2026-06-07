@@ -1,0 +1,111 @@
+.projects-container {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects-container .projects-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 40px;
+}
+
+.projects-tabs {
+  display: flex;
+  gap: 22px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  gap: 33px;
+  width: 100%;
+}
+
+.project-card .project-content .project-links .project-link-icon .icon-svg,
+.project-card .project-content .project-links .project-link-icon .icon-svg-stroke {
+  width: 24px;
+  height: 24px;
+  margin-right: 6px;
+  display: block;
+}
+
+[data-theme="dark"] .project-card .project-links .project-link-icon .icon-img {
+  filter: invert(1) brightness(2);
+}
+
+@media (max-width: 639px) {
+  .projects-container {
+    margin: 40px auto;
+  }
+
+  .projects-container .projects-heading {
+    font-size: 2rem;
+    margin-bottom: 24px;
+  }
+
+.projects-tabs {
+    gap: 12px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    
+    width: 100%; 
+    
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 24px; 
+    
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .projects-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .projects-tabs button, 
+  .projects-tabs .project-tab { 
+    flex-shrink: 0;
+    margin: 0; 
+  }
+
+  .projects-tabs button, 
+  .projects-tabs .project-tab { 
+    flex-shrink: 0;
+    margin: 15px 0; 
+  }
+
+  .projects-grid {
+    gap: 20px;
+  }
+
+  .project-card .project-content {
+    padding: 20px;
+  }
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(15px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
