@@ -23,9 +23,17 @@ export const Navbar: React.FC = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-
   const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>, targetId: string) => {
     e.preventDefault();
+
+    if (targetId === 'top') {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+      setIsOpen(false);
+      return;
+    }
 
     const element = document.getElementById(targetId);
     if (element) {
@@ -46,13 +54,19 @@ export const Navbar: React.FC = () => {
   return (
     <nav className="navbar-container ">
       <div className="navbar-inner glass-effect">
-        <div className="navbar-logo">
+        
+        <a 
+          href="/" 
+          className="navbar-logo" 
+          onClick={(e) => handleAnchorClick(e, 'top')}
+          aria-label="Scroll to top"
+        >
           {themeMode === 'light' ? (
             <img src={logoLight} alt="Light Theme Logo" className="logo" />
           ) : (
             <img src={logoDark} alt="Dark Theme Logo" className="logo" />
           )}
-        </div>
+        </a>
         
         <div className="navbar-controls">
           <button 

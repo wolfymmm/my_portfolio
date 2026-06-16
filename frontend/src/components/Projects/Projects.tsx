@@ -22,8 +22,8 @@ const projectsData: ProjectData[] = [
     title: 'Nice Gadgets',
     description: 'Modern React-based e-commerce platform offering a seamless shopping experience for tech enthusiasts. It features an interactive banner slider, smart category filtering, advanced sorting with pagination, and a fully functional cart and wishlist system with real-time counter updates.',
     tags: ['React', 'Redux', 'Typescript', 'SCSS', ],
-    githubLink: 'https://github.com/wolfymmm/React-Phone-Catalog',
-    demoLink: 'https://wolfymmm.github.io/react_phone-catalog/',
+    githubLink: 'https://github.com/wolfymmm/nice-gadgets',
+    demoLink: 'https://wolfymmm.github.io/nice-gadgets/',
     category: ['Development'],
   },
     {
@@ -31,7 +31,7 @@ const projectsData: ProjectData[] = [
     title: 'Booksy',
     description: 'Online library platform that allows users to discover and easily order books for free. It features an intuitive catalog search, smart category filtering, real-time book availability badges.',
     tags: ['Figma', 'Node.js', 'JavaScript', 'NLP', 'REST API', 'MongoDB', 'Python'],
-    githubLink: 'https://github.com/wolfymmm/Booksy',
+    githubLink: 'https://github.com/wolfymmm/library-system',
     category: ['Development'],
   },
     {
@@ -39,8 +39,8 @@ const projectsData: ProjectData[] = [
     title: '2048 Game',
     description: 'A web-based version of the popular 2048 puzzle game.',
     tags: ['JavaScript', 'SCSS', 'HTML'],
-    githubLink: 'https://github.com/wolfymmm/2048',
-    demoLink: 'https://wolfymmm.github.io/js_2048_game/',
+    githubLink: 'https://github.com/wolfymmm/2048-game',
+    demoLink: 'https://wolfymmm.github.io/2048-game/',
     category: ['Development'],
   },
     {
@@ -48,8 +48,8 @@ const projectsData: ProjectData[] = [
     title: 'Bang & Olufsen Landing Page',
     description: 'Fully responsive concept website designed to showcase high-end audio products. It features a minimalist and elegant aesthetic with sophisticated typography, immersive imagery, seamless navigation, and smooth adaptive layouts tailored perfectly for luxury brand storytelling across all device screens.',
     tags: ['SCSS', 'HTML'],
-    githubLink: 'https://github.com/wolfymmm/Landing-Page',
-    demoLink: 'https://wolfymmm.github.io/layout_landing-page/',
+    githubLink: 'https://github.com/wolfymmm/Bang-Olufsen-landing-page',
+    demoLink: 'https://wolfymmm.github.io/Bang-Olufsen-landing-page/',
     category: ['Development'],
   },
   {

@@ -18,7 +18,7 @@ export const Home: React.FC = () => {
       <Navbar />
 
       <main className="home-content">
-            <span className="nav-availability glass-effect">Available for new Projects</span>
+            <span className="nav-availability glass-effect">Available for new projects</span>
             <h1 className="nav-title">
               Hi! I am <span className="highlight-name">Yana</span>
             </h1>

@@ -9,7 +9,8 @@ import scssIcon from '../../assets/skills/scssIcon.svg';
 import jsIcon from '../../assets/skills/javaScriptIcon.svg';
 import tsIcon from '../../assets/skills/tsIcon.svg';
 import nodeIcon from '../../assets/skills/nodeIcon.svg';
-import gitIcon from '../../assets/skills/gitIcon.svg'; 
+import gitHubIcon from '../../assets/skills/gitHubIcon.svg';
+import gitIcon from '../../assets/skills/gitIcon.svg';  
 import pythonIcon from '../../assets/skills/pythonIcon.svg';
 import reduxIcon from '../../assets/skills/reduxIcon.svg';
 import fastaApiIcon from '../../assets/skills/fastApiIcon.svg';  
@@ -36,6 +37,7 @@ const skillsData: SkillItem[] = [
   { name: 'JavaScript', category: 'Frontend', icon: jsIcon },
   { name: 'TypeScript', category: 'Frontend', icon: tsIcon },
   { name: 'Node.js', category: 'Backend', icon: nodeIcon },
+  { name: 'GitHub', category: 'Tools', icon: gitHubIcon },
   { name: 'Git', category: 'Tools', icon: gitIcon },
   { name: 'Python', category: 'Backend', icon: pythonIcon },
   { name: 'Redux', category: 'Frontend', icon: reduxIcon },
