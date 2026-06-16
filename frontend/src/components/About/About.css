@@ -8,6 +8,7 @@
   position: relative; 
   overflow: hidden;
   display: flex;
+  flex-shrink: 0;
 }
 
 .about-content {

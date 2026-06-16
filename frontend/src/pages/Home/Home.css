@@ -8,8 +8,7 @@
   transition: background-color 0.3s ease; 
 
   position: relative;
-  overflow: hidden;
-  min-height: 100vh;
+  /* МІН-ВІСОТУ ВИДАЛЕНО, щоб сайт міг вільно рости вниз */
 }
 
 .home-content {
@@ -91,14 +90,13 @@
   margin-bottom: 30px;
 }
 
-
 .arrow-down {
   position: relative;
   display: block;
   margin: 0 auto 140px auto;
   
   width: 2px;                 
-  height: 67px;               
+  height: 67px;              
   background-color: var(--accent-purple);  
   
   animation: bounce 2s infinite ease-in-out;
@@ -117,7 +115,6 @@
   border-right: 3px solid var(--accent-purple);  
   border-bottom: 3px solid var(--accent-purple); 
 }
-
 
 @media (max-width: 639px) {
   .home-content .nav-title {
@@ -172,7 +169,6 @@
     margin-left: auto;
     margin-right: auto;
   }
-
 
   .button-group-home button,
   .button-group-home .contact-button,
